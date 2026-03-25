@@ -1,0 +1,54 @@
+.tech-section {
+  padding: 100px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.tech-item {
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tech-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--cyan);
+  opacity: 0.3;
+}
+
+.tech-item:hover {
+  transform: scale(1.05);
+  box-shadow: var(--glow-cyan);
+  border-color: var(--cyan);
+}
+
+.skill-name {
+  display: block;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.skill-progress {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, var(--cyan), var(--purple));
+  box-shadow: var(--glow-cyan);
+}
