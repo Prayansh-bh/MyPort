@@ -15,7 +15,14 @@ export const AI_CONFIG = {
       { name: "MongoDB", level: 82 },
       { name: "JavaScript", level: 96 },
       { name: "MySQL", level: 78 },
-      { name: "Express", level: 89 }
+      { name: "Express", level: 89 },
+      { name: "OpenAI", level: 92 },
+      { name: "Claude", level: 90 },
+      { name: "Antigravity", level: 95 },
+      { name: "Cursor", level: 92 },
+      { name: "Lovable", level: 88 },
+      { name: "Postman", level: 90 },
+      { name: "Git", level: 94 }
     ],
     experience: [
       {
@@ -39,11 +46,25 @@ export const AI_CONFIG = {
     ],
     projects: [
       {
-        title: "PrayPortz",
-        category: "Portfolio & ERP",
-        tools: "Open Source ERP, UI/UX Design, SEO, CRM",
-        description: "A premium 3D portfolio and ERP solution.",
-        link: "https://prayportz.odoo.com/"
+        title: "KiraDarbar",
+        category: "Legal-Tech",
+        tools: "React, Node.js, Express, TailwindCSS, Vercel",
+        description: "A specialized legal-tech platform helping Indian tenants fight illegal evictions and recover security deposits with automated, lawyer-signed legal notices.",
+        link: "https://kiradarbar.vercel.app/"
+      },
+      {
+        title: "Resumize",
+        category: "AI SaaS Platform",
+        tools: "Next.js, Tailwind CSS, OpenAI API, Framer Motion",
+        description: "An AI-powered career tool that simultaneously builds professional PDF resumes and responsive portfolio websites with real-time optimization.",
+        link: "https://resumize-ai-resume-portfolio-builde.vercel.app/"
+      },
+      {
+        title: "ExplainMyMedicalReport",
+        category: "AI Healthcare",
+        tools: "Google Gemini API, React, TailwindCSS, Vite",
+        description: "An AI-powered application that simplifies complex medical reports into easy-to-understand language.",
+        link: "https://explainmymedicalreport.vercel.app/"
       },
       {
         title: "GiftyHub",
@@ -52,21 +73,6 @@ export const AI_CONFIG = {
         description: "A sleek e-commerce platform for gifting.",
         link: "https://github.com/Prayansh-bh/GiftyHub-Demo",
         status: "COMING_SOON"
-      },
-      {
-        title: "PillowOver",
-        category: "E-Commerce",
-        tools: "HTML, TailwindCSS",
-        description: "Specialized bedding accessories store.",
-        link: "https://github.com/Prayansh-bh/PillowOver-Demo",
-        status: "COMING_SOON"
-      },
-      {
-        title: "Resumize",
-        category: "AI SaaS Platform",
-        tools: "Next.js, Tailwind CSS, OpenAI API, Framer Motion",
-        description: "An AI-powered career tool that simultaneously builds professional PDF resumes and responsive portfolio websites with real-time optimization.",
-        link: "https://resumize-ai-resume-portfolio-builde.vercel.app/"
       }
     ],
     socials: {
@@ -112,9 +118,13 @@ export const getAIResponse = (query: string) => {
       const resumize = data.projects.find(p => p.title === "Resumize");
       return `Resumize is a flagship AI SaaS platform. ${resumize?.description} It's built using ${resumize?.tools}. Truly a peak of AI integration.`;
     }
-    if (q.includes("prayportz")) {
-      const pp = data.projects.find(p => p.title === "PrayPortz");
-      return `PrayPortz is a premium 3D ecosystem. ${pp?.description} You can find the Odoo integration at ${pp?.link}.`;
+    if (q.includes("explainmymedicalreport") || q.includes("medical report")) {
+      const emr = data.projects.find(p => p.title === "ExplainMyMedicalReport");
+      return `ExplainMyMedicalReport is an AI healthcare project. ${emr?.description} You can access it at ${emr?.link}.`;
+    }
+    if (q.includes("kiradarbar") || q.includes("tenant") || q.includes("legal notice")) {
+      const kd = data.projects.find(p => p.title === "KiraDarbar");
+      return `KiraDarbar is a powerful Legal-Tech platform. ${kd?.description} It's designed to help tenants stand up for their rights. Check it out: ${kd?.link}`;
     }
     return `Prayansh has architected several high-impact systems, including ${data.projects.map(p => p.title).join(", ")}. Which one should I analyze for you?`;
   }
