@@ -4,7 +4,7 @@ export const AI_CONFIG = {
   userData: {
     name: "Prayansh Bhaurase",
     role: "Creative Full Stack Developer",
-    resumeLink: "https://drive.google.com/file/d/1STUAzwMSccxZhIuIWA2mhyKcw5OaYuQF/view?usp=drivesdk",
+    resumeLink: "https://drive.google.com/file/d/1bhP1bPJfOugrWvvxbHRYqyyOOvRY3ydn/view",
     skills: [
       { name: "React", level: 95 },
       { name: "Three.js", level: 88 },
