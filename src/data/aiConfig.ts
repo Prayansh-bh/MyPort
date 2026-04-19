@@ -67,12 +67,11 @@ export const AI_CONFIG = {
         link: "https://explainmymedicalreport.vercel.app/"
       },
       {
-        title: "GiftyHub",
-        category: "E-Commerce",
-        tools: "HTML, TailwindCSS, CSS",
-        description: "A sleek e-commerce platform for gifting.",
-        link: "https://github.com/Prayansh-bh/GiftyHub-Demo",
-        status: "COMING_SOON"
+        title: "Practice Partner",
+        category: "EdTech (Prototype)",
+        tools: "React, Vite, Razorpay, CSS",
+        description: "An English speaking practice platform that connects learners with real conversation partners for judgment-free 45-minute video sessions at ₹99, helping users build fluency and confidence.",
+        link: "https://practice-partner-rho.vercel.app/"
       }
     ],
     socials: {

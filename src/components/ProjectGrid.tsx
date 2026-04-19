@@ -24,7 +24,7 @@ const ProjectGrid = () => {
               </div>
               {project.link ? (
                 <a href={project.link} target="_blank" rel="noreferrer" className={`project-link ${project.status === 'COMING_SOON' ? 'coming-soon' : ''}`}>
-                  {project.status === 'COMING_SOON' ? 'Coming Soon' : 'View Project'} <FiExternalLink />
+                  {project.status === 'COMING_SOON' ? 'Coming Soon' : project.category.includes('Prototype') ? 'View Prototype' : 'View Project'} <FiExternalLink />
                 </a>
               ) : (
                 <span className="project-link disabled">

@@ -71,7 +71,7 @@ function App() {
         }
       );
     });
-  }, []);
+  }, [showLoader]);
 
   return (
     <>
@@ -92,6 +92,9 @@ function App() {
           <div className="footer-links">
             <a href="https://github.com/Prayansh-bh" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/prayansh-bhaurase/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://youtube.com/@damn_acoustic?si=wZkku3hSHy-pV0v4" target="_blank" rel="noreferrer">YouTube</a>
+            <a href="https://www.instagram.com/prayansh_bh?igsh=MWhuZGwwbTQxbjBvcw%3D%3D" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://x.com/Prayansh_Bh" target="_blank" rel="noreferrer">X (Twitter)</a>
           </div>
         </footer>
       </div>

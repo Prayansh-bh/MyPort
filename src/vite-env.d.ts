@@ -1,9 +1,9 @@
 /// <reference types="vite/client" />
 
 declare module "gsap-trial/ScrollSmoother" {
-  export const ScrollSmoother: any;
+  export const ScrollSmoother: unknown;
 }
 
 declare module "gsap-trial/SplitText" {
-  export const SplitText: any;
+  export const SplitText: unknown;
 }
