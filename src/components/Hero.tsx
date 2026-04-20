@@ -24,17 +24,16 @@ const Hero = () => {
 
       // Background glow mouse-follow effect
       // This creates a subtle parallax-like movement for the background elements
+      const xTo = gsap.quickTo('.hero-bg-glow', 'x', { duration: 1.5, ease: 'power2.out' });
+      const yTo = gsap.quickTo('.hero-bg-glow', 'y', { duration: 1.5, ease: 'power2.out' });
+
       const moveBg = (e: MouseEvent) => {
         const { clientX, clientY } = e;
         const xPos = (clientX / window.innerWidth - 0.5) * 20;
         const yPos = (clientY / window.innerHeight - 0.5) * 20;
         
-        gsap.to('.hero-bg-glow', {
-          x: xPos,
-          y: yPos,
-          duration: 1.5,
-          ease: 'power2.out'
-        });
+        xTo(xPos);
+        yTo(yPos);
       };
 
       window.addEventListener('mousemove', moveBg);
